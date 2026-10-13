@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  background: #172e96;
+  color: #181818;  
+}
+
+#desktop {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-image: url('/desktop.png');
+  filter: brightness(0.85);
+
+  z-index: -1;
+}
+
+#taskbar {
+  height: 40px;
+  background: #bdbfc8;
+
+  border-radius: 1rem 1rem 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+
+  z-index: 10000;
+}
+
+#start-button {
+  background: #ccced8;
+  color: #161925;
+  border: 0;
+  border-radius: 2rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+#start-button:hover {
+  background: #abb7d5;
+}
+
+#running-apps {
+  display: flex;
+  gap: 8px;
+  flex-grow: 1;
+  margin: 0 15px;
+}
+
+#system-tray {
+  font-size: 13px;
+  font-weight: bold;
+}
