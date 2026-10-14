@@ -1,0 +1,7 @@
+# LarpOS: The only OS made by larping
+
+## What is LarpOS?
+
+LarpOS is a web-based OS that can be easily run on school Chromebooks (and is also coded on school Chromebooks). 
+
+LarpOS, the OS of the larpers, by the larpers, for larpers, is a toy OS made entirely in HTML, CSS, and Typescript.
