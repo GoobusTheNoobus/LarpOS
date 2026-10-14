@@ -13,7 +13,6 @@ body {
   color: #181818;  
 
   font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: 1rem;
 }
 
 #desktop {
@@ -64,6 +63,10 @@ body {
   background: #abb7d5;
 }
 
+#start-button:active {
+  background: #929db7;
+}
+
 #running-apps {
   display: flex;
   gap: 8px;
@@ -88,6 +91,8 @@ body {
 
   border-radius: 1rem 1rem 0 0;
   padding: 1.5rem;
+
+  font-size: 2rem;
 }
 
 .hidden {
@@ -114,7 +119,10 @@ body {
   border: none;
   border-radius: 1rem;
   background: #00000000;
-  padding-bottom: 2px;
+  padding-bottom: 7px;
+
+  font-weight: 700;
+  color: #272727;
 }
 
 .app:hover {
@@ -123,5 +131,5 @@ body {
 
 .app img {
   width: 60px;
-  margin: 1px 12px 8px;
+  margin: 10px 12px 8px;
 }
