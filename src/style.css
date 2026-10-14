@@ -107,16 +107,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 10vh;
   margin: 1rem 1rem;
   text-align: center;
   user-select: none;
 
-  padding: 3px;
-
   border: none;
   border-radius: 1rem;
   background: #00000000;
+  padding-bottom: 2px;
 }
 
 .app:hover {
@@ -125,5 +123,5 @@ body {
 
 .app img {
   width: 60px;
-  margin-bottom: 8px;
+  margin: 1px 12px 8px;
 }
