@@ -10,14 +10,11 @@ export function initClock(clockElementId: string): void {
 
   const updateClock = () => {
     const now = new Date();
-    
+
     // Formats the time as HH:MM:SS
-    clockElement.textContent = now.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false
-    });
+    clockElement.textContent = now.toLocaleTimeString(
+        [],
+        {hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false});
   };
 
   updateClock();

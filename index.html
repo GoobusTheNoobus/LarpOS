@@ -3,17 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Larp OS</title>
+    <title>LarpOS</title>
     <link rel="stylesheet" href="/src/style.css" />
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <div id="desktop"></div>
+    <div id="desktop"></div> 
+
+    <div id="start-menu" class="hidden">
+      <div id="apps">
+        <button class="app">
+          <img src="/file-icon.png">
+          Files
+        </button>
+        <button class="app">
+          <img src="/terminal-icon.png">
+          Terminal
+        </button>
+      </div>
+    </div>
 
     <footer id="taskbar">
       <button id="start-button">Start</button>
       <div id="system-tray">
-        <span id="clock">00:00:00</span>
+        <span id="clock"></span>
       </div>
     </footer>
   </body>

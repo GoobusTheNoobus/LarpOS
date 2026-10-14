@@ -8,9 +8,12 @@ body {
   padding: 0;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Courier New', Courier, monospace;
+
   background: #172e96;
   color: #181818;  
+
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.8rem;
 }
 
 #desktop {
@@ -55,8 +58,6 @@ body {
   border-radius: 2rem;
   font-weight: bold;
   padding: 6px 12px;
-  cursor: pointer;
-  font-family: inherit;
 }
 
 #start-button:hover {
@@ -73,4 +74,56 @@ body {
 #system-tray {
   font-size: 13px;
   font-weight: bold;
+}
+
+#start-menu {
+  display: flex;
+  width: 40vw;
+  height: 400px;
+  background-color: #cbc9c9;
+  margin-left: 10px;
+
+  position: fixed;
+  bottom: 20px;
+
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#start-menu.hidden {
+  display: none;
+}
+
+#start-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 10vh;
+  margin: 1rem 1rem;
+  text-align: center;
+  user-select: none;
+
+  padding: 3px;
+
+  border: none;
+  border-radius: 1rem;
+  background: #00000000;
+}
+
+.app:hover {
+  background: #00000030;
+}
+
+.app img {
+  width: 60px;
+  margin-bottom: 8px;
 }
