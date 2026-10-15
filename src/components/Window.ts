@@ -44,7 +44,16 @@ export class Window {
       throw new Error('LarpOS: Desktop element not found');
     }
 
-    desktop.appendChild(element);
+    document.body.appendChild(element);
+
+    element.querySelector('.close-button')?.addEventListener('click', (event) => {
+      if (!(event.target instanceof Element)) {
+        throw new Error('LarpOS: Clicked app isn\'t an element');
+      }
+
+      element.remove();
+      this.element = null;
+    })
 
     this.element = element;
   }

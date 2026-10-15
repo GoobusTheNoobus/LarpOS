@@ -106,6 +106,7 @@ body {
 #start-menu {
   display: flex;
   flex-direction: column;
+  z-index: 1000;
 }
 
 .app {
@@ -154,15 +155,27 @@ body {
   margin: 0 auto;
 }
 
+.window-controls {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 .close-button {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   text-align: center;
   border: 0px;
   border-radius: 10px;
-  background-color: #ececec;
+  font-size: 16px;
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  transition: 300ms ease;
+  background-color: #00000000;
 }
 
 .close-button:hover {
-  background-color: #ecececec;
+  background-color: #c0c0c0;
 }

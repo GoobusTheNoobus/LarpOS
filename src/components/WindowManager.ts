@@ -1,5 +1,3 @@
-import {applications} from '../apps';
-
 import {Window, type WindowOptions} from './Window';
 
 export class WindowManager {
@@ -18,21 +16,15 @@ export class WindowManager {
   }
 
   launch(app: string): Window|null {
-    if (!Object.hasOwn(applications, app)) {
-      console.error(`Unknown application: ${app}`);
-      return null;
-    }
-
-    const definition = applications[app as keyof typeof applications];
 
     return this.create({
-      title: definition.title,
-      width: definition.width,
-      height: definition.height,
+      title: app,
+      width: 600,
+      height: 400,
 
       // Calculate screen center
-      x: window.innerWidth / 2 - definition.width / 2,
-      y: window.innerHeight / 2 - definition.height / 2,
+      x: window.innerWidth / 2 - 600 / 2,
+      y: window.innerHeight / 2 - 400 / 2,
     })
   }
 }
