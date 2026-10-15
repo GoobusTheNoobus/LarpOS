@@ -55,6 +55,42 @@ export class Window {
       this.element = null;
     })
 
+    const titlebar = element.querySelector('.window-titlebar') as HTMLElement;
+
+    if (titlebar) {
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+
+    titlebar.addEventListener('mousedown', (event: MouseEvent) => {
+      // Only drag on left click
+      if (event.button !== 0) return;
+        
+      isDragging = true;
+      startX = event.clientX - element.offsetLeft;
+      startY = event.clientY - element.offsetTop;
+
+      // Bring the active window to the front
+      element.style.zIndex = String(Date.now());
+
+      event.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e: MouseEvent) => {
+        if (!isDragging) return;
+
+        const newX = e.clientX - startX;
+        const newY = e.clientY - startY;
+
+        element.style.left = `${newX}px`;
+        element.style.top = `${newY}px`;
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+    }
+
     this.element = element;
   }
 }
