@@ -8,11 +8,26 @@
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
+
+    <template id="window-template">
+      <section class="window">
+        <header class="window-titlebar">
+          <span class="window-title"></span>
+          <div class="window-controls">
+            <button class="close-button" aria-label="Close">x</button>
+          </div>
+        </header>
+
+        <div class="window-content"></div>
+      </section>
+    </template>
+
+
     <div id="desktop"></div> 
 
     <div id="start-menu" class="hidden">
       <div id="apps">
-        <button class="app">
+        <button class="app" data-app="files">
           <img src="/file-icon.png">
           Files
         </button>

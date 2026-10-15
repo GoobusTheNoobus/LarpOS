@@ -133,3 +133,36 @@ body {
   width: 60px;
   margin: 10px 12px 8px;
 }
+
+.window {
+  background-color: #f0f0f0;
+  position: fixed;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.window-titlebar {
+  height: 30px;
+  background-color: #e0e0e0e0;
+  display: flex;
+  color: #272727;
+  padding: 5px;
+  align-items: center;
+}
+
+.window-title {
+  margin: 0 auto;
+}
+
+.close-button {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #ececec;
+}
+
+.close-button:hover {
+  background-color: #ecececec;
+}
