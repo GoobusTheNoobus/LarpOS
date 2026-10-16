@@ -19,7 +19,8 @@ startButton.addEventListener('click', (event) => {
   event.stopPropagation();
 
   startMenu.classList.toggle('hidden');
-  startMenu.style.zIndex = String(Date.now());
+
+  startMenu.style.zIndex = 9999999999999999;
 });
 
 startMenu.addEventListener('click', (event) => {
